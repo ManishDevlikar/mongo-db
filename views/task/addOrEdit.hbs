@@ -1,0 +1,20 @@
+<h3>{{viewTitle}}</h3>
+
+<form action="/task" method="POST">
+    <input type="hidden" name="_id" value="{{task._id}}">
+    <div class="form-group">
+        <label>Task</label>
+        <input type="text" class="form-control" name="taskNo" placeholder="Enter Task" value="{{task.taskNo}}">
+        <div class="text-danger">{{task.taskError}}</div>
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <input type="textarea" class="form-control" name="descriptionNo" placeholder="Enter Description"
+            value="{{task.descriptionNo}}">
+        <div class="text-danger">{{task.descriptionError}}</div>
+    </div>
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-list-alt"></i>Submit</button>
+        <a class="btn btn-secondary" href="/task/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
